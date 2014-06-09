@@ -13,6 +13,8 @@
 		6D23C87B1945806600925CBE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D23C87A1945806600925CBE /* Images.xcassets */; };
 		6D23C8871945806600925CBE /* AdaptivePopoverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D23C8861945806600925CBE /* AdaptivePopoverTests.swift */; };
 		6D2949271945835500F882F9 /* SchoolListTC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2949261945835500F882F9 /* SchoolListTC.swift */; };
+		6DB21A9D1945B42D00413CA9 /* ScreenShot_iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DB21A9C1945B42D00413CA9 /* ScreenShot_iPhone.png */; };
+		6DB21A9F1945B44700413CA9 /* ScreenShot_iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DB21A9E1945B44700413CA9 /* ScreenShot_iPad.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		6D23C8851945806600925CBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D23C8861945806600925CBE /* AdaptivePopoverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptivePopoverTests.swift; sourceTree = "<group>"; };
 		6D2949261945835500F882F9 /* SchoolListTC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchoolListTC.swift; sourceTree = "<group>"; };
+		6DB21A9C1945B42D00413CA9 /* ScreenShot_iPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScreenShot_iPhone.png; sourceTree = "<group>"; };
+		6DB21A9E1945B44700413CA9 /* ScreenShot_iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScreenShot_iPad.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,8 @@
 				6D23C8751945806600925CBE /* RootVC.swift */,
 				6D2949261945835500F882F9 /* SchoolListTC.swift */,
 				6D23C8771945806600925CBE /* Main.storyboard */,
+				6DB21A9C1945B42D00413CA9 /* ScreenShot_iPhone.png */,
+				6DB21A9E1945B44700413CA9 /* ScreenShot_iPad.png */,
 				6D23C87A1945806600925CBE /* Images.xcassets */,
 				6D23C8711945806600925CBE /* Supporting Files */,
 			);
@@ -194,6 +200,8 @@
 			files = (
 				6D23C8791945806600925CBE /* Main.storyboard in Resources */,
 				6D23C87B1945806600925CBE /* Images.xcassets in Resources */,
+				6DB21A9F1945B44700413CA9 /* ScreenShot_iPad.png in Resources */,
+				6DB21A9D1945B42D00413CA9 /* ScreenShot_iPhone.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
