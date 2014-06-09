@@ -38,8 +38,8 @@
 		6D23C8851945806600925CBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D23C8861945806600925CBE /* AdaptivePopoverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptivePopoverTests.swift; sourceTree = "<group>"; };
 		6D2949261945835500F882F9 /* SchoolListTC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchoolListTC.swift; sourceTree = "<group>"; };
-		6DB21A9C1945B42D00413CA9 /* ScreenShot_iPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScreenShot_iPhone.png; sourceTree = "<group>"; };
-		6DB21A9E1945B44700413CA9 /* ScreenShot_iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScreenShot_iPad.png; sourceTree = "<group>"; };
+		6DB21A9C1945B42D00413CA9 /* ScreenShot_iPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ScreenShot_iPhone.png; path = AdaptivePopover/ScreenShot_iPhone.png; sourceTree = "<group>"; };
+		6DB21A9E1945B44700413CA9 /* ScreenShot_iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ScreenShot_iPad.png; path = AdaptivePopover/ScreenShot_iPad.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +63,8 @@
 		6D23C8651945806600925CBE = {
 			isa = PBXGroup;
 			children = (
+				6DB21A9C1945B42D00413CA9 /* ScreenShot_iPhone.png */,
+				6DB21A9E1945B44700413CA9 /* ScreenShot_iPad.png */,
 				6D23C8701945806600925CBE /* AdaptivePopover */,
 				6D23C8831945806600925CBE /* AdaptivePopoverTests */,
 				6D23C86F1945806600925CBE /* Products */,
@@ -85,8 +87,6 @@
 				6D23C8751945806600925CBE /* RootVC.swift */,
 				6D2949261945835500F882F9 /* SchoolListTC.swift */,
 				6D23C8771945806600925CBE /* Main.storyboard */,
-				6DB21A9C1945B42D00413CA9 /* ScreenShot_iPhone.png */,
-				6DB21A9E1945B44700413CA9 /* ScreenShot_iPad.png */,
 				6D23C87A1945806600925CBE /* Images.xcassets */,
 				6D23C8711945806600925CBE /* Supporting Files */,
 			);
