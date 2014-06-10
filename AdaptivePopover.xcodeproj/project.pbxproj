@@ -7,11 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6D0FFD441945B8AB003F5D69 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 6D0FFD411945B8AB003F5D69 /* README.md */; };
-		6D0FFD451945B8AB003F5D69 /* ScreenShot_popOver_iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D0FFD421945B8AB003F5D69 /* ScreenShot_popOver_iPad.png */; };
-		6D0FFD461945B8AB003F5D69 /* ScreenShot_popOver_iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D0FFD431945B8AB003F5D69 /* ScreenShot_popOver_iPhone.png */; };
+		6D0136C21947C49500464C16 /* ScreenShot.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D0136C11947C49500464C16 /* ScreenShot.png */; };
 		6D23C8741945806600925CBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D23C8731945806600925CBE /* AppDelegate.swift */; };
-		6D23C8761945806600925CBE /* RootVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D23C8751945806600925CBE /* RootVC.swift */; };
 		6D23C8791945806600925CBE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D23C8771945806600925CBE /* Main.storyboard */; };
 		6D23C87B1945806600925CBE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D23C87A1945806600925CBE /* Images.xcassets */; };
 		6D23C8871945806600925CBE /* AdaptivePopoverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D23C8861945806600925CBE /* AdaptivePopoverTests.swift */; };
@@ -29,13 +26,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6D0136C11947C49500464C16 /* ScreenShot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScreenShot.png; sourceTree = "<group>"; };
 		6D0FFD411945B8AB003F5D69 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		6D0FFD421945B8AB003F5D69 /* ScreenShot_popOver_iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScreenShot_popOver_iPad.png; sourceTree = "<group>"; };
-		6D0FFD431945B8AB003F5D69 /* ScreenShot_popOver_iPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ScreenShot_popOver_iPhone.png; sourceTree = "<group>"; };
 		6D23C86E1945806600925CBE /* AdaptivePopover.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdaptivePopover.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D23C8721945806600925CBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D23C8731945806600925CBE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6D23C8751945806600925CBE /* RootVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootVC.swift; sourceTree = "<group>"; };
 		6D23C8781945806600925CBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6D23C87A1945806600925CBE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6D23C8801945806600925CBE /* AdaptivePopoverTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AdaptivePopoverTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,8 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				6D0FFD411945B8AB003F5D69 /* README.md */,
-				6D0FFD421945B8AB003F5D69 /* ScreenShot_popOver_iPad.png */,
-				6D0FFD431945B8AB003F5D69 /* ScreenShot_popOver_iPhone.png */,
+				6D0136C11947C49500464C16 /* ScreenShot.png */,
 				6D23C8701945806600925CBE /* AdaptivePopover */,
 				6D23C8831945806600925CBE /* AdaptivePopoverTests */,
 				6D23C86F1945806600925CBE /* Products */,
@@ -87,7 +81,6 @@
 			isa = PBXGroup;
 			children = (
 				6D23C8731945806600925CBE /* AppDelegate.swift */,
-				6D23C8751945806600925CBE /* RootVC.swift */,
 				6D2949261945835500F882F9 /* SchoolListTC.swift */,
 				6D23C8771945806600925CBE /* Main.storyboard */,
 				6D23C87A1945806600925CBE /* Images.xcassets */,
@@ -201,8 +194,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6D0FFD461945B8AB003F5D69 /* ScreenShot_popOver_iPhone.png in Resources */,
-				6D0FFD451945B8AB003F5D69 /* ScreenShot_popOver_iPad.png in Resources */,
+				6D0136C21947C49500464C16 /* ScreenShot.png in Resources */,
 				6D23C8791945806600925CBE /* Main.storyboard in Resources */,
 				6D23C87B1945806600925CBE /* Images.xcassets in Resources */,
 			);
@@ -222,9 +214,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6D23C8761945806600925CBE /* RootVC.swift in Sources */,
 				6D2949271945835500F882F9 /* SchoolListTC.swift in Sources */,
-				6D0FFD441945B8AB003F5D69 /* README.md in Sources */,
 				6D23C8741945806600925CBE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
