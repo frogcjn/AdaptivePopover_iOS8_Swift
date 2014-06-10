@@ -8,5 +8,4 @@ Adaptive Popover using UIPopoverPresentationController, which is new feature in 
     * with a navigation controller
     * with a cancel button on the navigation bar
 
-![iPad popOver](https://raw.githubusercontent.com/frogcjn/AdaptivePopover_iOS8/master/ScreenShot_popOver_iPad.png)
-![iPhone popOver](https://raw.githubusercontent.com/frogcjn/AdaptivePopover_iOS8/master/ScreenShot_popOver_iPhone.png)
+![ScreenShot](https://raw.githubusercontent.com/frogcjn/AdaptivePopover_iOS8/master/ScreenShot.png)

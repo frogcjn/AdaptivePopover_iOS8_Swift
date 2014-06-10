@@ -10,16 +10,18 @@ import UIKit
 
 class SchoolListTC: UITableViewController, UIPopoverPresentationControllerDelegate {
     
+    let cancelButtonItem: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Cancel, target: nil, action: "tapCancel:")
+    
     init(coder aDecoder: NSCoder!) {
         super.init(coder: aDecoder)
+        
+        //cancel button
+        cancelButtonItem.target = self //we cannot use self before super.init, so we set target here
+        navigationItem.rightBarButtonItem = cancelButtonItem
         
         // popover settings
         modalPresentationStyle = .Popover
         popoverPresentationController.delegate = self
-        
-        //cancel button
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Cancel, target: self, action: "tapCancel:")
-
     }
     
     func tapCancel(_ : UIBarButtonItem) {
@@ -36,7 +38,6 @@ class SchoolListTC: UITableViewController, UIPopoverPresentationControllerDelega
     
     // popover settings, adaptive for horizontal compact trait
     // #pragma mark - UIPopoverPresentationControllerDelegate
-    
     func adaptivePresentationStyleForPresentationController(_: UIPresentationController!)
          -> UIModalPresentationStyle{
             return .FullScreen
