@@ -2,8 +2,8 @@
 //  SchoolListTC.swift
 //  AdaptivePopover
 //
-//  Created by 曹剑楠 on 14/6/8.
-//  Copyright (c) 2014年 Cao Jiannan. All rights reserved.
+//  Created by frogcjn on 14/6/8.
+//  Copyright (c) 2014 Cao Jiannan. All rights reserved.
 //
 
 import UIKit
@@ -17,8 +17,8 @@ enum AdaptiveMode{
 class SchoolListTC: UITableViewController, UIPopoverPresentationControllerDelegate {
     
     
-    @IBInspectable var popOverOniPhone:Bool = false
-    @IBInspectable var popOverOniPhoneLandscape:Bool = true
+    @IBInspectable var popoverOniPhone:Bool = false
+    @IBInspectable var popoverOniPhoneLandscape:Bool = true
     
     init(coder aDecoder: NSCoder!) {
         super.init(coder: aDecoder)
@@ -52,14 +52,14 @@ class SchoolListTC: UITableViewController, UIPopoverPresentationControllerDelega
         
         //this methods is only called by System when the screen has compact width
         
-        //return .None means we still want popOver when adaptive on iPhone
+        //return .None means we still want popover when adaptive on iPhone
         //return .FullScreen means we'll get modal presetaion on iPhone
         
-        switch(popOverOniPhone, popOverOniPhoneLandscape){
-        case (true, _): // always popOver on iPhone
+        switch(popoverOniPhone, popoverOniPhoneLandscape){
+        case (true, _): // always popover on iPhone
             return .None
             
-        case (_, true): // popOver only on landscape on iPhone
+        case (_, true): // popover only on landscape on iPhone
             let size = PC.presentingViewController.view.frame.size
             if(size.width>320.0){ //landscape
                 return .None
@@ -67,7 +67,7 @@ class SchoolListTC: UITableViewController, UIPopoverPresentationControllerDelega
                 return .FullScreen
             }
             
-        default: // no popOver on iPhone
+        default: // no popover on iPhone
             return .FullScreen
         }
         
