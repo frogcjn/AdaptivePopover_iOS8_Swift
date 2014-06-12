@@ -9,7 +9,7 @@ Adaptive Popover using UIPopoverPresentationController, which is new feature in 
     * with a navigation controller
     * with a cancel button on the navigation bar
 
-*Add options to popover on iPhone
+* Add options to popover on iPhone
     * we can always show popover, or
     * we can show popover only on landscape
 
