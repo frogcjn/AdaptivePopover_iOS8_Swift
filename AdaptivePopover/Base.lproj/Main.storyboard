@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.11"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--RootVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="RootVC" customModule="AdaptivePopover" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,8 +15,88 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Always Popover" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tOZ-Iu-fhZ">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="on iPhone" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oZB-Bm-EVw">
+                                <rect key="frame" x="77" y="395" width="78" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="on iPhone Landscape" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YuH-0i-WHp">
+                                <rect key="frame" x="77" y="434" width="167" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch appearanceType="aqua" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="1GZ-VF-PRg">
+                                <rect key="frame" x="20" y="390" width="51" height="31"/>
+                            </switch>
+                            <switch appearanceType="aqua" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Vwi-fg-9Ta">
+                                <rect key="frame" x="20" y="429" width="51" height="31"/>
+                            </switch>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Vwi-fg-9Ta" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="48Z-tU-P7t"/>
+                            <constraint firstItem="1GZ-VF-PRg" firstAttribute="top" secondItem="tOZ-Iu-fhZ" secondAttribute="bottom" constant="8" id="G4A-P4-fHJ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Vwi-fg-9Ta" secondAttribute="bottom" constant="20" id="IE2-ov-Kmz"/>
+                            <constraint firstItem="tOZ-Iu-fhZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="UY0-S2-9uk"/>
+                            <constraint firstItem="1GZ-VF-PRg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="Ve1-Kh-Ou7"/>
+                            <constraint firstItem="YuH-0i-WHp" firstAttribute="top" secondItem="oZB-Bm-EVw" secondAttribute="bottom" constant="18" id="W8i-bJ-6Bo"/>
+                            <constraint firstItem="YuH-0i-WHp" firstAttribute="leading" secondItem="Vwi-fg-9Ta" secondAttribute="trailing" constant="8" id="a6c-0X-ZMU"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="YuH-0i-WHp" secondAttribute="bottom" constant="25" id="f52-wD-wyE"/>
+                            <constraint firstItem="Vwi-fg-9Ta" firstAttribute="top" secondItem="1GZ-VF-PRg" secondAttribute="bottom" constant="8" id="fK1-TM-3IN"/>
+                            <constraint firstItem="oZB-Bm-EVw" firstAttribute="leading" secondItem="1GZ-VF-PRg" secondAttribute="trailing" constant="8" id="rjy-lZ-YpY"/>
+                        </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="tOZ-Iu-fhZ"/>
+                                <exclude reference="oZB-Bm-EVw"/>
+                                <exclude reference="YuH-0i-WHp"/>
+                                <exclude reference="1GZ-VF-PRg"/>
+                                <exclude reference="Vwi-fg-9Ta"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="UY0-S2-9uk"/>
+                                <exclude reference="IE2-ov-Kmz"/>
+                                <exclude reference="f52-wD-wyE"/>
+                                <exclude reference="G4A-P4-fHJ"/>
+                                <exclude reference="Ve1-Kh-Ou7"/>
+                                <exclude reference="rjy-lZ-YpY"/>
+                                <exclude reference="48Z-tU-P7t"/>
+                                <exclude reference="fK1-TM-3IN"/>
+                                <exclude reference="W8i-bJ-6Bo"/>
+                                <exclude reference="a6c-0X-ZMU"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="tOZ-Iu-fhZ"/>
+                                <include reference="oZB-Bm-EVw"/>
+                                <include reference="YuH-0i-WHp"/>
+                                <include reference="1GZ-VF-PRg"/>
+                                <include reference="Vwi-fg-9Ta"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="UY0-S2-9uk"/>
+                                <include reference="IE2-ov-Kmz"/>
+                                <include reference="f52-wD-wyE"/>
+                                <include reference="G4A-P4-fHJ"/>
+                                <include reference="Ve1-Kh-Ou7"/>
+                                <include reference="rjy-lZ-YpY"/>
+                                <include reference="48Z-tU-P7t"/>
+                                <include reference="fK1-TM-3IN"/>
+                                <include reference="W8i-bJ-6Bo"/>
+                                <include reference="a6c-0X-ZMU"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="8oc-lH-ybJ">
                         <barButtonItem key="rightBarButtonItem" title="Choose School" id="iFV-qC-vyc">
@@ -27,6 +107,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="popOverOniPhoneLandscapeSwitch" destination="Vwi-fg-9Ta" id="ByD-5f-2BN"/>
+                        <outlet property="popOverOniPhoneSwitch" destination="1GZ-VF-PRg" id="fqr-WB-GMF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

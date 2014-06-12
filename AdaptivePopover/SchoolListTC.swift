@@ -8,20 +8,29 @@
 
 import UIKit
 
+enum AdaptiveMode{
+    case Default
+    case LandscapePopover
+    case AlwaysPopover
+}
+
 class SchoolListTC: UITableViewController, UIPopoverPresentationControllerDelegate {
     
-    let cancelButtonItem: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Cancel, target: nil, action: "tapCancel:")
+    
+    @IBInspectable var popOverOniPhone:Bool = false
+    @IBInspectable var popOverOniPhoneLandscape:Bool = true
     
     init(coder aDecoder: NSCoder!) {
         super.init(coder: aDecoder)
         
         //cancel button
-        cancelButtonItem.target = self //we cannot use self before super.init, so we set target here
-        navigationItem.rightBarButtonItem = cancelButtonItem
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Cancel, target: self, action: "tapCancel:")
         
         // popover settings
         modalPresentationStyle = .Popover
         popoverPresentationController.delegate = self
+        
+        self.preferredContentSize = CGSize(width:320,height:100)
     }
     
     func tapCancel(_ : UIBarButtonItem) {
@@ -30,17 +39,39 @@ class SchoolListTC: UITableViewController, UIPopoverPresentationControllerDelega
     }
     
     override func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!){
-        //select school
+        //selected a school
         let schoolName = tableView.cellForRowAtIndexPath(indexPath).textLabel.text
         println("did select school: \(schoolName)")
         dismissViewControllerAnimated(true, completion:nil)
     }
-    
+
     // popover settings, adaptive for horizontal compact trait
     // #pragma mark - UIPopoverPresentationControllerDelegate
-    func adaptivePresentationStyleForPresentationController(_: UIPresentationController!)
-         -> UIModalPresentationStyle{
+
+    func adaptivePresentationStyleForPresentationController(PC: UIPresentationController!) -> UIModalPresentationStyle{
+        
+        //this methods is only called by System when the screen has compact width
+        
+        //return .None means we still want popOver when adaptive on iPhone
+        //return .FullScreen means we'll get modal presetaion on iPhone
+        
+        switch(popOverOniPhone, popOverOniPhoneLandscape){
+        case (true, _): // always popOver on iPhone
+            return .None
+            
+        case (_, true): // popOver only on landscape on iPhone
+            let size = PC.presentingViewController.view.frame.size
+            if(size.width>320.0){ //landscape
+                return .None
+            }else{
+                return .FullScreen
+            }
+            
+        default: // no popOver on iPhone
             return .FullScreen
+        }
+        
+
     }
     
     func presentationController(_: UIPresentationController!, viewControllerForAdaptivePresentationStyle _: UIModalPresentationStyle)
