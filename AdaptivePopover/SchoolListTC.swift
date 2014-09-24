@@ -20,7 +20,7 @@ class SchoolListTC: UITableViewController, UIPopoverPresentationControllerDelega
     @IBInspectable var popoverOniPhone:Bool = false
     @IBInspectable var popoverOniPhoneLandscape:Bool = true
     
-    init(coder aDecoder: NSCoder!) {
+    required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
         //cancel button
@@ -28,7 +28,7 @@ class SchoolListTC: UITableViewController, UIPopoverPresentationControllerDelega
         
         // popover settings
         modalPresentationStyle = .Popover
-        popoverPresentationController.delegate = self
+        popoverPresentationController!.delegate = self
         
         self.preferredContentSize = CGSize(width:320,height:100)
     }
@@ -38,9 +38,9 @@ class SchoolListTC: UITableViewController, UIPopoverPresentationControllerDelega
         dismissViewControllerAnimated(true, completion:nil);
     }
     
-    override func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!){
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
         //selected a school
-        let schoolName = tableView.cellForRowAtIndexPath(indexPath).textLabel.text
+        let schoolName = tableView.cellForRowAtIndexPath(indexPath)!.textLabel!.text
         println("did select school: \(schoolName)")
         dismissViewControllerAnimated(true, completion:nil)
     }
