@@ -9,11 +9,11 @@
 import UIKit
 
 class RootVC: UIViewController {
-    @IBOutlet var popoverOniPhoneSwitch : UISwitch
-    @IBOutlet var popoverOniPhoneLandscapeSwitch : UISwitch
+    @IBOutlet var popoverOniPhoneSwitch : UISwitch!
+    @IBOutlet var popoverOniPhoneLandscapeSwitch : UISwitch!
     
-    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
-        switch(segue.identifier!){
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        switch(segue.identifier){
         case "chooseSchool":
             var schoolListTC = segue.destinationViewController as SchoolListTC
             schoolListTC.popoverOniPhone = popoverOniPhoneSwitch.on
