@@ -13,9 +13,9 @@ class RootVC: UIViewController {
     @IBOutlet var popoverOniPhoneLandscapeSwitch : UISwitch!
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        switch(segue.identifier){
+        switch(segue.identifier!){
         case "chooseSchool":
-            var schoolListTC = segue.destinationViewController as SchoolListTC
+            var schoolListTC = (segue.destinationViewController as? SchoolListTC)!
             schoolListTC.popoverOniPhone = popoverOniPhoneSwitch.on
             schoolListTC.popoverOniPhoneLandscape = popoverOniPhoneLandscapeSwitch.on
             break
