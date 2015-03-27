@@ -48,7 +48,7 @@ class SchoolListTC: UITableViewController, UIPopoverPresentationControllerDelega
     // popover settings, adaptive for horizontal compact trait
     // #pragma mark - UIPopoverPresentationControllerDelegate
 
-    func adaptivePresentationStyleForPresentationController(PC: UIPresentationController!) -> UIModalPresentationStyle{
+    func adaptivePresentationStyleForPresentationController(PC: UIPresentationController) -> UIModalPresentationStyle{
         
         //this methods is only called by System when the screen has compact width
         
@@ -74,8 +74,8 @@ class SchoolListTC: UITableViewController, UIPopoverPresentationControllerDelega
 
     }
     
-    func presentationController(_: UIPresentationController!, viewControllerForAdaptivePresentationStyle _: UIModalPresentationStyle)
-         -> UIViewController!{
+    func presentationController(_: UIPresentationController, viewControllerForAdaptivePresentationStyle _: UIModalPresentationStyle)
+         -> UIViewController?{
             return UINavigationController(rootViewController: self)
     }
 }
